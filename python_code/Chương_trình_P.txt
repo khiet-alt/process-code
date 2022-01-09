@@ -1,0 +1,3 @@
+- cho phép xem và điều chỉnh khung giời trong text file.
+- xóa được lịch sử,sử dụng máy tính của trẻ và màn hình/bàn phím ghi lại đã lưu ở múc online (làm cơ bản trong ngày , cao hơn thì tuần)
+- Chương trình P có thể chạy cùng lúc từ cả 2 phụ huynh nên có thể xảy ra đụng đồ tài nguyên, chương trình thiết kê k có các process cùng lúc vào critical section

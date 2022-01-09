@@ -1,0 +1,20 @@
+Drive: gnome
+when calling fork(), you now have 2 two copies of program running (2 process concurrently run independently), child will start below fork() command
+    ref: detail fork(): https://man7.org/linux/man-pages/man2/fork.2.html#:~:text=fork()%20creates%20a%20new,run%20in%20separate%20memory%20spaces.
+    If u need to share resource between parent and child, using clone()
+when calling execlp(), it will replace the current process, so it never return unless having error (For ex: execlp("/bin/ls", "ls", NULL);)
+    ref: https://stackoverflow.com/questions/17058149/why-it-does-not-return-after-execlp-is-it-normal
+using system() to execute command in terminal instead of execlp()
+pidof <application name> or using: pgrep <app name> or ps aux | grep "runa"  or pstree -p | grep "runmain"
+        ref: https://www.2daygeek.com/check-find-parent-process-id-pid-ppid-linux/
+        ref: https://askubuntu.com/questions/180336/how-to-find-the-process-id-pid-of-a-running-terminal-program
+Get process id: getpid() and getppid()
+man <command>: to see detail of that command
+this code is used to see the status of shutdown command:
+    USECS=$(busctl get-property org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager ScheduledShutdown | cut -d ' ' -f 3); SECS=$((USECS / 1000000)); date --date=@$SECS
+bolding word and press F2: change all occurrences of variables inside that funcion
+
+log out via terminal
+    ref: https://askubuntu.com/questions/15795/how-can-you-log-out-via-the-terminal
+
+    
